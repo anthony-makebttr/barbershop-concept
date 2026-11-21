@@ -67,7 +67,7 @@ h3{font-size:20px}
 
 /* why strip */
 .strip{background:var(--blue);color:var(--cream)}
-.strip ul{list-style:none;margin:0;padding:28px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:var(--max);margin-inline:auto}
+.strip ul{list-style:none;margin:0;padding:28px 24px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:var(--max);margin-inline:auto}
 .strip li{display:flex;align-items:center;gap:12px;font:500 18px/1.2 var(--display);text-transform:uppercase;letter-spacing:.05em}
 .strip svg{width:28px;height:28px;flex:none;stroke:var(--cream)}
 
