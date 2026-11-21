@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Book a Cut · Barbershop Concept</title>
+<title>Book a Cut · The Barbershop Company</title>
+<meta name="robots" content="noindex">
 <meta name="theme-color" content="#005A9C">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,12 +79,13 @@
 </style>
 </head>
 <body>
+<div class="concept-bar">Website preview · to book today, use <a href="https://book.thecut.co/Sterling-reyes-srnymlu" style="color:var(--gold)">theCut</a></div>
 <a class="skip" href="#main">Skip to content</a>
 <header class="header">
   <div class="wrap">
-    <a class="brand" href="index.html">Your Shop Co.<small>Your City · CA</small></a>
+    <a class="brand" href="index.html">Barbershop Co.<small>Monterey Park · CA</small></a>
     <nav class="nav" aria-label="Main"><a href="index.html#services">Services</a><a href="index.html#barbers">Barbers</a><a href="index.html#visit">Visit</a></nav>
-    <div class="header-cta"><a class="tel" href="tel:+15550100199">(555) 010-0199</a></div>
+    <div class="header-cta"><a class="tel" href="tel:+13237269676">(323) 726-9676</a></div>
   </div>
   <div class="pole" aria-hidden="true"></div>
 </header>
@@ -154,7 +156,7 @@
           <div><dt>Service</dt><dd id="s-service" class="empty">Not picked yet</dd></div>
           <div><dt>Barber</dt><dd id="s-barber" class="empty">Not picked yet</dd></div>
           <div><dt>When</dt><dd id="s-when" class="empty">Not picked yet</dd></div>
-          <div><dt>Where</dt><dd>1234 Main St<br>Your City · parking in rear</dd></div>
+          <div><dt>Where</dt><dd>2234 S. Atlantic Blvd<br>Monterey Park · parking in rear</dd></div>
         </dl>
         <div class="total"><span>Total</span><span id="s-price">$—</span></div>
         <p class="fine">Pay at the shop. Cash or card.</p>
@@ -166,9 +168,9 @@
 <div class="pole" aria-hidden="true"></div>
 <footer class="footer">
   <div class="wrap">
-    <a class="brand" href="index.html">Your Shop Co.<small>Your City · CA</small></a>
-    <ul><li><a href="#">Instagram</a></li><li><a href="tel:+15550100199">(555) 010-0199</a></li></ul>
-    <p class="copy">© 2026 Your Shop Name · 1234 Main St, Your City, CA</p>
+    <a class="brand" href="index.html">Barbershop Co.<small>Monterey Park · CA</small></a>
+    <ul><li><a href="https://www.instagram.com/barbershopco/" target="_blank" rel="noopener">Instagram</a></li><li><a href="tel:+13237269676">(323) 726-9676</a></li></ul>
+    <p class="copy">© 2026 The Barbershop Company · 2234 S. Atlantic Blvd, Monterey Park, CA</p>
   </div>
 </footer>
 
@@ -184,7 +186,7 @@ const SERVICES = [
   ['Shave','Straight razor with a hot towel',30],
   ['Cut + beard','The full combo',60],
 ];
-const BARBERS = [['Any barber','First chair open','★'],['Barber 1','Fades & lineups','B1'],['Barber 2','Name TBD','B2'],['Barber 3','Name TBD','B3']];
+const BARBERS = [['Any barber','First chair open','★'],['Sterling Reyes','Fades & lineups','SR'],['Barber 2','Name TBD','B2'],['Barber 3','Name TBD','B3']];
 const HOURS = {0:[9,16],1:[10,19],2:[10,19],3:[10,19],4:[10,19],5:[10,19],6:[9,18]};
 const st = {step:0, service:null, barber:null, date:null, time:null};
 const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
@@ -255,7 +257,7 @@ $('#form').onsubmit = e => {
   if (!name) return $('#name').focus();
   if (phone.length!==10) return $('#phone').focus();
   $('#done-h').textContent = `You're booked, ${name.split(' ')[0]}`;
-  $('#ticket').innerHTML = `<dt>Service</dt><dd>${st.service.n}</dd><dt>Barber</dt><dd>${st.barber}</dd><dt>When</dt><dd>${fmtD(st.date)}<br>${fmtT(st.time)}</dd><dt>Confirmation</dt><dd>BK-${String(1000+Math.floor(Math.random()*9000))}</dd>`;
+  $('#ticket').innerHTML = `<dt>Service</dt><dd>${st.service.n}</dd><dt>Barber</dt><dd>${st.barber}</dd><dt>When</dt><dd>${fmtD(st.date)}<br>${fmtT(st.time)}</dd><dt>Confirmation</dt><dd>BSC-${String(1000+Math.floor(Math.random()*9000))}</dd>`;
   $('.summary').hidden = true;
   $('#steps').hidden = true;
   go(4);
