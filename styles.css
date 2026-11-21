@@ -144,7 +144,7 @@ h3{font-size:20px}
   .nav.open a{padding:16px 0;border-bottom:1px solid var(--line);font-size:18px}
   .hero .wrap{grid-template-columns:1fr;gap:56px}
   .hero-photo{max-width:520px;margin:0 auto;width:100%}
-  .strip ul{grid-template-columns:1fr 1fr}
+  .strip ul{grid-template-columns:repeat(3,1fr)}
   .services-grid,.visit-grid{grid-template-columns:1fr}
   .barbers{grid-template-columns:1fr}
   .reviews{grid-template-columns:1fr;text-align:center;padding:32px 24px}
